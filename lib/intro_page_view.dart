@@ -7,16 +7,20 @@ class IntroPageView extends StatelessWidget {
 
   IntroPageView({
     this.viewportFraction = 0.85,
+    this.height = 500.0
   });
 
   final double viewportFraction;
+  final double height;
+
+
 
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       body: new Center(
         child: new SizedBox.fromSize(
-          size: const Size.fromHeight(500.0),
+          size: new Size.fromHeight(height),
           child: new PageTransformer(
             pageViewBuilder: (context, visibilityResolver) {
               return new PageView.builder(

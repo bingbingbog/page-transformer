@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       ),
       home: new IntroPageView(
         viewportFraction: 0.95,
+        height: 300.0,
       ),
     );
   }
