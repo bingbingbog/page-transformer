@@ -7,6 +7,14 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+
+  navToAnotherPage(x) {
+    print(x.id);
+    print(this);
+        // Navigator.push(context, new MaterialPageRoute(
+        //   builder: (BuildContext context) => new AnotherPage(),
+        // ));
+  }
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -22,12 +30,13 @@ class MyApp extends StatelessWidget {
         ],
         viewportFraction: 1.00,
         height: 300.0,
+        onTapUp: () => navToAnotherPage(x),
       )
     );
   }
 }
 
-class AnotherPage extends StatefulWidget {
+class AnotherPage extends StatelessWidget {
 
   AnotherPage({
     this.id
@@ -35,18 +44,14 @@ class AnotherPage extends StatefulWidget {
 
   final int id;
 
-  @override
-  _AnotherPageState createState() => new _AnotherPageState();
-}
 
-class _AnotherPageState extends State<AnotherPage> {
   @override
   Widget build(BuildContext context) {
-    return new Container(
-      child: new Text(
-        widget.id.toString(),
-        textAlign: TextAlign.center
-      ),
-    );
+    return new Scaffold(
+        body: new Center(
+          child: new Text(
+'sad'          ),
+        ),
+      );
   }
 }

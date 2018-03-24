@@ -19,7 +19,7 @@ class SlidePageItem extends StatelessWidget {
   SlidePageItem({
     @required this.item,
     @required this.pageVisibility,
-    this.handleOnTap,
+    @required this.handleOnTap,
   });
 
   final SlideItem item;
@@ -118,10 +118,10 @@ class SlidePageItem extends StatelessWidget {
         vertical: 16.0,
         horizontal: 8.0,
       ),
-      child: new GestureDetector(
-        onTapUp: handleOnTap,
-        child:
-          new Material(
+      child:
+        new GestureDetector(
+          onTap: handleOnTap,
+          child: new Material(
             elevation: 4.0,
             borderRadius: new BorderRadius.circular(8.0),
             child: new Stack(
@@ -133,7 +133,7 @@ class SlidePageItem extends StatelessWidget {
               ],
             ),
           ),
-      ),
+        )
     );
   }
 }
