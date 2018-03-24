@@ -7,10 +7,12 @@ class IntroPageItem extends StatelessWidget {
   IntroPageItem({
     @required this.item,
     @required this.pageVisibility,
+    this.handleOnTap,
   });
 
   final IntroItem item;
   final PageVisibility pageVisibility;
+  final Function handleOnTap;
 
   Widget _applyTextEffects({
     @required double translationFactor,
@@ -104,17 +106,21 @@ class IntroPageItem extends StatelessWidget {
         vertical: 16.0,
         horizontal: 8.0,
       ),
-      child: new Material(
-        elevation: 4.0,
-        borderRadius: new BorderRadius.circular(8.0),
-        child: new Stack(
-          fit: StackFit.expand,
-          children: [
-            image,
-            imageOverlayGradient,
-            _buildTextContainer(context),
-          ],
-        ),
+      child: new GestureDetector(
+        onTap: handleOnTap,
+        child:
+          new Material(
+            elevation: 4.0,
+            borderRadius: new BorderRadius.circular(8.0),
+            child: new Stack(
+              fit: StackFit.expand,
+              children: [
+                image,
+                imageOverlayGradient,
+                _buildTextContainer(context),
+              ],
+            ),
+          ),
       ),
     );
   }

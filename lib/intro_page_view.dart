@@ -23,6 +23,7 @@ class IntroPageView extends StatelessWidget {
                   return new IntroPageItem(
                     item: item,
                     pageVisibility: pageVisibility,
+                    handleOnTap: ()=>print("on tap working"),
                   );
                 },
               );
