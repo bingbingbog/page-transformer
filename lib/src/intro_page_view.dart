@@ -36,7 +36,7 @@ class SliderView extends StatelessWidget {
                   return new SlidePageItem(
                     item: item,
                     pageVisibility: pageVisibility,
-                    handleOnTap: onTapUp(item),
+                    handleOnTap: () => onTapUp(item),
                   );
                 },
               );

@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         ],
         viewportFraction: 1.00,
         height: 300.0,
-        onTapUp: () => navToAnotherPage(x),
+        onTapUp: navToAnotherPage,
       )
     );
   }
