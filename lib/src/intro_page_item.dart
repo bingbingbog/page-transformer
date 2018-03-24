@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
-import 'package:page_transformer/src/page_transformer.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter_slider/src/page_transformer.dart';
 
 class SlideItem {
   SlideItem({
     this.title,
     this.category,
     this.imageUrl,
+    this.id,
   });
 
   final String title;
   final String category;
   final String imageUrl;
+  final Object id;
 }
 class SlidePageItem extends StatelessWidget {
   SlidePageItem({
@@ -117,7 +119,7 @@ class SlidePageItem extends StatelessWidget {
         horizontal: 8.0,
       ),
       child: new GestureDetector(
-        onTap: handleOnTap,
+        onTapUp: handleOnTap,
         child:
           new Material(
             elevation: 4.0,

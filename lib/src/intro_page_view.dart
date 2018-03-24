@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:page_transformer/src/intro_page_item.dart';
-import 'package:page_transformer/src/page_transformer.dart';
+import 'package:flutter_slider/src/intro_page_item.dart';
+import 'package:flutter_slider/src/page_transformer.dart';
 
 
 class SliderView extends StatelessWidget {
@@ -10,12 +10,13 @@ class SliderView extends StatelessWidget {
     @required this.slideItems,
     this.viewportFraction = 0.85,
     this.height = 500.0,
+    this.onTapUp
   });
 
   final double viewportFraction;
   final double height;
   final List<SlideItem> slideItems ;
-
+  final Function onTapUp;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +36,7 @@ class SliderView extends StatelessWidget {
                   return new SlidePageItem(
                     item: item,
                     pageVisibility: pageVisibility,
-                    handleOnTap: ()=>print("on tap working"),
+                    handleOnTap: onTapUp(item),
                   );
                 },
               );
