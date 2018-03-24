@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transformer/intro_page_item.dart';
 import 'package:page_transformer/intro_page_view.dart';
 
 void main() {
@@ -13,7 +14,12 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new IntroPageView(
+      home: new SliderView(
+        slideItems: <SlideItem>[
+          new SlideItem(title: 'Writing things together is what we do best!', category: 'COLLABORATION', imageUrl: 'assets/1.png',),
+          new SlideItem(title: 'Occasionally wearing pants is a good idea.', category: 'CULTURE', imageUrl: 'assets/2.png',),
+          new SlideItem(title: 'We might have the best team spirit ever.', category: 'SPIRIT', imageUrl: 'assets/3.png',),
+        ],
         viewportFraction: 0.95,
         height: 300.0,
       ),

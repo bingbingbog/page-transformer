@@ -1,16 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
-import 'package:page_transformer/data.dart';
 import 'package:page_transformer/page_transformer.dart';
 
-class IntroPageItem extends StatelessWidget {
-  IntroPageItem({
+class SlideItem {
+  SlideItem({
+    this.title,
+    this.category,
+    this.imageUrl,
+  });
+
+  final String title;
+  final String category;
+  final String imageUrl;
+}
+class SlidePageItem extends StatelessWidget {
+  SlidePageItem({
     @required this.item,
     @required this.pageVisibility,
     this.handleOnTap,
   });
 
-  final IntroItem item;
+  final SlideItem item;
   final PageVisibility pageVisibility;
   final Function handleOnTap;
 

@@ -1,18 +1,20 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:page_transformer/data.dart';
 import 'package:page_transformer/intro_page_item.dart';
 import 'package:page_transformer/page_transformer.dart';
 
-class IntroPageView extends StatelessWidget {
 
-  IntroPageView({
+class SliderView extends StatelessWidget {
+
+  SliderView({
+    @required this.slideItems,
     this.viewportFraction = 0.85,
-    this.height = 500.0
+    this.height = 500.0,
   });
 
   final double viewportFraction;
   final double height;
-
+  final List<SlideItem> slideItems ;
 
 
   @override
@@ -24,13 +26,13 @@ class IntroPageView extends StatelessWidget {
             pageViewBuilder: (context, visibilityResolver) {
               return new PageView.builder(
                 controller: new PageController(viewportFraction: viewportFraction),
-                itemCount: sampleItems.length,
+                itemCount: slideItems.length,
                 itemBuilder: (context, index) {
-                  final item = sampleItems[index];
+                  final item = slideItems[index];
                   final pageVisibility =
                       visibilityResolver.resolvePageVisibility(index);
 
-                  return new IntroPageItem(
+                  return new SlidePageItem(
                     item: item,
                     pageVisibility: pageVisibility,
                     handleOnTap: ()=>print("on tap working"),
