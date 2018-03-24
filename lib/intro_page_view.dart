@@ -4,6 +4,13 @@ import 'package:page_transformer/intro_page_item.dart';
 import 'package:page_transformer/page_transformer.dart';
 
 class IntroPageView extends StatelessWidget {
+
+  IntroPageView({
+    this.viewportFraction = 0.85,
+  });
+
+  final double viewportFraction;
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -13,7 +20,7 @@ class IntroPageView extends StatelessWidget {
           child: new PageTransformer(
             pageViewBuilder: (context, visibilityResolver) {
               return new PageView.builder(
-                controller: new PageController(viewportFraction: 0.85),
+                controller: new PageController(viewportFraction: viewportFraction),
                 itemCount: sampleItems.length,
                 itemBuilder: (context, index) {
                   final item = sampleItems[index];

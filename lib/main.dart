@@ -13,7 +13,9 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new IntroPageView(),
+      home: new IntroPageView(
+        viewportFraction: 0.95,
+      ),
     );
   }
 }
