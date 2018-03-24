@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
-import 'package:page_transformer/page_transformer.dart';
+import 'package:page_transformer/src/page_transformer.dart';
 
 class SlideItem {
   SlideItem({

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:page_transformer/intro_page_item.dart';
-import 'package:page_transformer/intro_page_view.dart';
+import 'package:page_transformer/src/intro_page_item.dart';
+import 'package:page_transformer/src/intro_page_view.dart';
 
 void main() {
   runApp(new MyApp());

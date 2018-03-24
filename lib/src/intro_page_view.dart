@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:page_transformer/intro_page_item.dart';
-import 'package:page_transformer/page_transformer.dart';
+import 'package:page_transformer/src/intro_page_item.dart';
+import 'package:page_transformer/src/page_transformer.dart';
 
 
 class SliderView extends StatelessWidget {
