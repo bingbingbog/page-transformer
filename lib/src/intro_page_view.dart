@@ -20,8 +20,7 @@ class SliderView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      body: new SizedBox.fromSize(
+    return new SizedBox.fromSize(
           size: new Size.fromHeight(height),
           child: new PageTransformer(
             pageViewBuilder: (context, visibilityResolver) {
@@ -36,13 +35,12 @@ class SliderView extends StatelessWidget {
                   return new SlidePageItem(
                     item: item,
                     pageVisibility: pageVisibility,
-                    handleOnTap: () => onTapUp(item),
+                    handleOnTap: () => onTapUp(context,item),
                   );
                 },
               );
             },
           ),
-        ),
-    );
+        );
   }
 }
