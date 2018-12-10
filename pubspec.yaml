@@ -19,3 +19,6 @@ flutter:
 author: Alvin Lee <alvinlee001@live.com.my>
 homepage: https://github.com/alvinlee001/page-transformer
 version: 0.0.1
+environment:
+  sdk: ">=2.0.0-dev.28.0 <3.0.0"
+  flutter: ">=0.1.4 <2.0.0"
